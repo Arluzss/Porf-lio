@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Global Tags */
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+span {
+    width: 15%;
+}
+
+/* Class */
+
+.text {
+    display: inline;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.other .text h3 {
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    padding-left: 2%;
+}
+
+.other .text p {
+    font-size: clamp(0rem, 4vw, 1.2rem);
+    padding-left: 2%;
+}
+
+.demo-button {
+    text-align: center;
+    background-color: #2a7ae4;
+    border: 2px solid #2a7ae4;
+    color: white;
+    min-width: 14%;
+    margin: 1%;
+    font-size: 1.5em;
+    padding: 12px 1rem;
+    border-radius: 5px;
+}
+
+.repo-button {
+    text-align: center;
+    border: 2px solid black;
+    min-width: 14%;
+    margin: 1%;
+    font-size: 1.5em;
+    padding: 12px 1rem;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IDs */
+
+#nav-list {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+#nav-list li {
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+#bird {
+    position: absolute;
+    margin-left: 1%;
+    left: 0;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#mountain {
+    width: 100%;
+}
+
+#home .text h1 {
+    font-size: clamp(2.8rem, 4vw, 4.5rem);
+}
+
+#home .text p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding-top: 5%;
+}
+
+#btn-projetos {
+    cursor: pointer;
+    border: 5px solid black;
+    margin-top: 5%;
+    font-size: 3em;
+}
+
+#about-page .text h2 {
+    font-size: clamp(2.2rem, 3vw, 3rem);
+}
+
+#resume {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+#resume .text {
+    text-align: left;
+    width: 40%;
+    height: 55%;
+}
+
+#habili {
+    width: 40%;
+    height: 55%;
+}
+
+#skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    gap: 5px;
+}
+
+#skills-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#resume .text h3 {
+    font-size: clamp(1.2rem, 3vw, 3rem);
+}
+
+#resume .text p {
+    width: 80%;
+    font-size: clamp(0.80rem, 2vw, 1.5rem);
+}
+
+#education {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#content div {
+    width: 100%;
+    height: 80%;
+}
+
+#content div img {
+    height: 60%;
+    object-fit: cover;
+}
+
+#projects {
+    width: 100%;
+    height: 100vh;
+}
+
+#projects .text h2 {
+    font-size: clamp(2.2rem, 3vw, 3rem);
+}
+
+#project-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+}
+
+@media (max-width: 1024px){
+
+    #content div img {
+        height: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header {
+        display: none;
+    }
+
+    .other{
+        text-align: center;
+    }
+
+    .other .text{
+        margin-bottom: 2%;
+    }
+
+    #mountain {
+        display: none;
+    }
+
+    #resume {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+    }
+
+    #btn-projetos {
+        font-size: 2em;
+        border: 3px solid black;
+    }
+
+    #skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #project-div {
+        margin-top: 40%;
+    }
+
+    #content div img {
+        height: 20%;
+    }
+
+}
